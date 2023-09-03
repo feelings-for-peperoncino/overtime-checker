@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const now = new Date();
       const diffMilliseconds = now - endTime;
-      const diffMinutes = diffMilliseconds / (1000 * 60);
+      const diffMinutes = Math.floor(diffMilliseconds / (1000 * 60)); // 小数点以下を切り捨て
 
       if (diffMinutes < 0) {
           resultElement.textContent = "現在の時刻が業務終了時刻より前です。";
@@ -25,3 +25,4 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   });
 });
+
