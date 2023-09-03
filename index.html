@@ -45,13 +45,14 @@
 
 <body>
   <div class="container py-5">
-    <h1>経過時間計算</h1>
+    <h1>超勤時間計算</h1>
     <label for="endTime">業務終了時刻:</label>
     <input type="time" id="endTime" value="16:45">
   </div>
   <div class="container">
-    <button id="calculateButton">超勤を計算</button>
-    <p id="result"></p>
+    <button id="calculateButton" type="button">超勤を計算</button>
+    <p class="text-danger py-3">※超勤時間は5分プラスされた時間が表示されます</p>
+    <p class="fs-1" id="result"></p>
   </div>
 
 

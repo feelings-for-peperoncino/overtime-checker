@@ -16,12 +16,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const now = new Date();
       const diffMilliseconds = now - endTime;
-      const diffMinutes = Math.floor(diffMilliseconds / (1000 * 60)); // 小数点以下を切り捨て
+      const diffMinutes = Math.floor(diffMilliseconds / (1000 * 60)) + 5; // 超勤時間に5分を加える
 
       if (diffMinutes < 0) {
           resultElement.textContent = "現在の時刻が業務終了時刻より前です。";
       } else {
-          resultElement.textContent = `経過時間: ${diffMinutes} 分`;
+          resultElement.textContent = `超勤時間: ${diffMinutes} 分`;
       }
   });
 });
